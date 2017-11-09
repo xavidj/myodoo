@@ -12,6 +12,7 @@
     "depends": [
     ],
     "data": [
+        'views/people.xml',
     ],
     'installable': True,
 }

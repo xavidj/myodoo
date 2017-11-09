@@ -8,7 +8,7 @@ from odoo import api, fields, models
 
 
 class People(models.Model):
-    _name = 'people.people'
+    _name = 'myodoo.people'
 
     age = fields.Integer(string='Age')
 
