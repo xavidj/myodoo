@@ -6,11 +6,18 @@
             The following tag is an action definition for a "window action",
             that is an action opening a view or a set of views
         -->
+        <template id="people_css" name="people assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/myodoo_people/static/src/people.css"/>
+            </xpath>
+        </template>
+
+
         <record model="ir.actions.act_window" id="people_list_action">
             <field name="name">People</field>
             <field name="res_model">myodoo.people</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create the first person
                 </p>
@@ -31,5 +38,43 @@
         <!-- Full id location:
              action="openacademy.course_list_action"
              It is not required when it is the same module -->
+        <record model="ir.ui.view" id="people_tree_view">
+            <field name="name">people.tree</field>
+            <field name="model">myodoo.people</field>
+            <field name="arch" type="xml">
+                <tree string="People Tree">
+                    <field name="name"/>
+                    <field name="age"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="people_kanban_view">
+            <field name="name">people.kanban</field>
+            <field name="model">myodoo.people</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <templates>
+                        <t t-name="kanban-box">
+
+                                <div t-attf-class="oe_kanban_content">
+                                    <!-- title -->
+                                    Session name:
+                                    <field name="name"/>
+                                    <br/>
+                                    Avatar:
+                                    <img t-att-src="kanban_image('myodoo.people', 'avatar', record.id.value)" class="oe_kanban_image"/>
+                                    <br/>
+                                    Age:
+                                    <field name="age"/>
+                                </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
     </data>
 </odoo>
