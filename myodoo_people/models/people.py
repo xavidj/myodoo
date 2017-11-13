@@ -13,3 +13,5 @@ class People(models.Model):
     age = fields.Integer(string='Age')
     name = fields.Char('Name', required=True)
     avatar = fields.Binary(string='Avatar')
+    latitud= fields.Float(string="Latitud")
+    longitud = fields.Float(string="Longitud")

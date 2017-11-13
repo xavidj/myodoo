@@ -9,6 +9,7 @@
         <template id="people_css" name="people assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
                 <link rel="stylesheet" href="/myodoo_people/static/src/people.css"/>
+
             </xpath>
         </template>
 
@@ -57,7 +58,6 @@
                     <field name="name"/>
                     <templates>
                         <t t-name="kanban-box">
-
                                 <div t-attf-class="oe_kanban_content">
                                     <!-- title -->
                                     Session name:
@@ -75,6 +75,50 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="people_form_view">
+            <field name="name">people.kanban</field>
+            <field name="model">myodoo.people</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="name"/>
+                    <templates>
+                        <t t-set="latitud" t-value="42.4667"/>
+                        <t t-set="longitud" t-value="longitud"/>
 
+                        <t t-name="form-box" >
+                            <script>
+
+                                  function initMap() {
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                      zoom: 4,
+                                      center: {lat: 42.4667, lng:-2.45}
+                                    });
+                                    var marker = new google.maps.Marker({
+                                      position: {lat: 42.4667, lng: -2.45},
+                                      map: map
+                                    });
+                                  }
+                            </script>
+                            <div id="map"></div>
+
+                            <script
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ6-5iXLabN54uzx_bMO24Jbs-8nnxBmM&amp;callback=initMap">
+                            </script>
+                            <div t-attf-class="oe_form_content">
+                                    <!-- title -->
+                                    Session name:
+                                    <field name="name"/>
+                                    <br/>
+                                    Avatar:
+                                    <img t-att-src="kanban_image('myodoo.people', 'avatar', record.id.value)" class="oe_kanban_image"/>
+                                    <br/>
+                                    Age:
+                                    <field name="age"/>
+                                </div>
+                        </t>
+                    </templates>
+                </form>
+            </field>
+        </record>
     </data>
 </odoo>

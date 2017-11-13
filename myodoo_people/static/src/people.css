@@ -4,3 +4,7 @@
   border-radius: 50%;
   border: medium solid coral;
 }
+#map {
+        height: 100px;
+        width: 100px;
+       }
