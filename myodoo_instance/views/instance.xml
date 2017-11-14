@@ -26,15 +26,15 @@
         </record>
 
         <!-- top level menu: no parent -->
-        <menuitem id="main_myinstances_menu" name="MyInstances"/>
+        <menuitem id="main_instances_menu" name="Instances"/>
         <!-- A first level in the left side menu is needed
              before using action= attribute -->
-        <menuitem id="myinstancesmenu" name="MyInstances"
-                  parent="main_myinstances_menu"/>
+        <menuitem id="instancesmenu" name="Instances"
+                  parent="main_instances_menu"/>
         <!-- the following menuitem should appear *after*
              its parent openacademy_menu and *after* its
              action course_list_action -->
-        <menuitem id="instance_menu" name="Instance" parent="myinstancesmenu"
+        <menuitem id="instance_menu" name="Instance" parent="instancesmenu"
                   action="instance_list_action"/>
         <!-- Full id location:
              action="openacademy.course_list_action"
@@ -46,6 +46,11 @@
                 <tree string="Instance Tree">
                     <field name="name"/>
                     <field name="description"/>
+                    <field name="client_id"/>
+                    <field name="ip"/>
+                    <field name="version"/>
+                    <field name="status"/>
+
                 </tree>
             </field>
         </record>
@@ -65,6 +70,18 @@
                                     <br/>
                                     Description:
                                     <field name="description"/>
+                                    <br/>
+                                    Client:
+                                    <field name="client_id"/>
+                                    <br/>
+                                    IP:
+                                    <field name="ip"/>
+                                    <br/>
+                                    Version:
+                                    <field name="version"/>
+                                    <br/>
+                                    Status:
+                                    <field name="status"/>
                                 </div>
                         </t>
                     </templates>

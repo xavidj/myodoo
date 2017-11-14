@@ -10,3 +10,9 @@ class Instance(models.Model):
 
     name = fields.Char('Name', required=True)
     description = fields.Text(string='Description')
+    client_id = fields.Many2one('res.partner',
+        ondelete='set null', string="Client", index=True)
+    ip = fields.Char('IP', required=True)
+    version = fields.Selection((('10','10.0'), ('8','8.0'),('11','11.0')),'Version')
+    status = fields.Selection((('s', 'Lista'), ('f', 'Apagada'), ('a', 'Arrancando')), 'Status')
+
