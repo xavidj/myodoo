@@ -26,15 +26,15 @@
         </record>
 
         <!-- top level menu: no parent -->
-        <menuitem id="main_myodoo_menu" name="MyOdoo"/>
+        <menuitem id="main_myinstances_menu" name="MyInstances"/>
         <!-- A first level in the left side menu is needed
              before using action= attribute -->
-        <menuitem id="myodoo_menu" name="MyOdoo"
-                  parent="main_myodoo_menu"/>
+        <menuitem id="myinstancesmenu" name="MyInstances"
+                  parent="main_myinstances_menu"/>
         <!-- the following menuitem should appear *after*
              its parent openacademy_menu and *after* its
              action course_list_action -->
-        <menuitem id="instance_menu" name="Instance" parent="myodoo_menu"
+        <menuitem id="instance_menu" name="Instance" parent="myinstancesmenu"
                   action="instance_list_action"/>
         <!-- Full id location:
              action="openacademy.course_list_action"
@@ -45,7 +45,7 @@
             <field name="arch" type="xml">
                 <tree string="Instance Tree">
                     <field name="name"/>
-                    <field name="descripction"/>
+                    <field name="description"/>
                 </tree>
             </field>
         </record>
@@ -55,13 +55,12 @@
             <field name="model">myodoo.instance</field>
             <field name="arch" type="xml">
                 <form>
-                    <field name="name"/>
                     <templates>
                         <t t-name="form-box" >
 
                             <div t-attf-class="oe_form_content">
                                     <!-- title -->
-                                    Session name:
+                                    Instance name:
                                     <field name="name"/>
                                     <br/>
                                     Description:
