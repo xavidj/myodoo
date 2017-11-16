@@ -82,6 +82,21 @@
                                     <br/>
                                     Status:
                                     <field name="status"/>
+                                    <br/>
+                                    Backend Login:
+                                    <field name="backend_login"/>
+                                    password:
+                                    <field name="backend_password" password="True" />
+                                    <br/>
+                                    Postgres Login:
+                                    <field name="postgres_login"/>
+                                    password:
+                                    <field name="postgres_password" password="True" />
+                                    <br/>
+                                    SSH Login:
+                                    <field name="ssh_login"/>
+                                    password:
+                                    <field name="ssh_password" password="True" />
                                 </div>
                         </t>
                     </templates>
