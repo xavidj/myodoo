@@ -43,7 +43,7 @@
             <field name="name">instance.tree</field>
             <field name="model">myodoo.instance</field>
             <field name="arch" type="xml">
-                <tree string="Instance Tree">
+                <tree string="Instance Tree" colors="red:status=='f';green:status=='s';orange:status=='a'">
                     <field name="name"/>
                     <field name="description"/>
                     <field name="client_id"/>

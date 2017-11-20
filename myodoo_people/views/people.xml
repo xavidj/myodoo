@@ -84,8 +84,8 @@
                     <templates>
                         <t t-name="form-box" >
                             <script>
-                                  var latitud=document.getElementsByClassName("latitud").innerHTML;
-                                  var longitud=document.getElementsByClassName("longitud").innerHTML;
+                                  var latitud=parseFloat(document.getElementById("latitud").children[0].innerHTML);
+                                  var longitud=parseFloat(document.getElementById("longitud").children[0].innerHTML);
                                   function initMap() {
                                     var map = new google.maps.Map(document.getElementById('map'), {
                                       zoom: 4,
@@ -113,7 +113,7 @@
                                     Age:
                                     <field name="age"/>
                                     Latitud:
-                                    <div id="latitud"><field name="latitud" class="latitud"/></div>
+                                    <div id="latitud"><field name="latitud" class="latitud" id="latitud"/></div>
                                     Longitud:
                                     <div id="longitud"><field name="longitud" class="longitud"/></div>
                                 </div>
