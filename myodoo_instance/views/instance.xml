@@ -62,27 +62,26 @@
                 <form>
                     <templates>
                         <t t-name="form-box" >
-
-                            <div t-attf-class="oe_form_content">
-                                    <!-- title -->
-                                    Instance name:
+                            <group>
                                     <field name="name"/>
-                                    <br/>
-                                    Description:
                                     <field name="description"/>
-                                    <br/>
-                                    Client:
                                     <field name="client_id"/>
-                                    <br/>
-                                    IP:
                                     <field name="ip"/>
-                                    <br/>
-                                    Version:
                                     <field name="version"/>
-                                    <br/>
-                                    Status:
                                     <field name="status"/>
-                                </div>
+                                    <group>
+                                        <field name="backend_login"/>
+                                        <field name="backend_password" password="True" />
+                                    </group>
+                                    <group>
+                                        <field name="postgres_login"/>
+                                        <field name="postgres_password" password="True" />
+                                    </group>
+                                    <group>
+                                        <field name="ssh_login"/>
+                                        <field name="ssh_password" password="True" />
+                                    </group>
+                            </group>
                         </t>
                     </templates>
                 </form>
