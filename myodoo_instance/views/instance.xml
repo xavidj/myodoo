@@ -43,7 +43,7 @@
             <field name="name">instance.tree</field>
             <field name="model">myodoo.instance</field>
             <field name="arch" type="xml">
-                <tree string="Instance Tree" colors="red:status=='f';green:status=='s';orange:status=='a'">
+                <tree string="Instance Tree" colors="red:status=='down';green:status=='up';orange:status=='starting'">
                     <field name="name"/>
                     <field name="description"/>
                     <field name="client_id"/>
@@ -60,6 +60,10 @@
             <field name="model">myodoo.instance</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                         <button name="button_on" string="On" type="object"  icon="fa-power-off" attrs="{'invisible': [('status', '=', 'up')]}"/>
+                                        <button name="button_off" string="Off" type="object" icon="fa-times" attrs="{'invisible': [('status', '=', 'down')]}"/>
+                    </header>
                     <templates>
                         <t t-name="form-box" >
                             <group>
@@ -68,7 +72,10 @@
                                     <field name="client_id"/>
                                     <field name="ip"/>
                                     <field name="version"/>
-                                    <field name="status"/>
+                                    <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}" >
+                                        <field name="status" />
+                                    </div>
+                                <field name="color" />
                                     <group>
                                         <field name="backend_login"/>
                                         <field name="backend_password" password="True" />
