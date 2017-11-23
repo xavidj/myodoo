@@ -62,20 +62,25 @@
                 <form>
                     <header>
                          <button name="button_on" string="On" type="object"  icon="fa-power-off" attrs="{'invisible': [('status', '=', 'up')]}"/>
-                                        <button name="button_off" string="Off" type="object" icon="fa-times" attrs="{'invisible': [('status', '=', 'down')]}"/>
+                         <button name="button_off" string="Off" type="object" icon="fa-times" attrs="{'invisible': [('status', '=', 'down')]}"/>
                     </header>
-                    <templates>
-                        <t t-name="form-box" >
-                            <group>
+                    <group>
+                        <group>
                                     <field name="name"/>
                                     <field name="description"/>
+                            <group>
                                     <field name="client_id"/>
+                                    <field name="partner_name"/>
+                                    <field name="partner_function"/>
+                                    <field name="partner_email"/>
+                                    <field name="partner_image" widget="image" class="oe_avatar" />
+
+                            </group>
                                     <field name="ip"/>
                                     <field name="version"/>
-                                    <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}" >
-                                        <field name="status" />
-                                    </div>
-                                <field name="color" />
+                                    <field name="status" />
+                        </group>
+
                                     <group>
                                         <field name="backend_login"/>
                                         <field name="backend_password" password="True" />
@@ -88,11 +93,21 @@
                                         <field name="ssh_login"/>
                                         <field name="ssh_password" password="True" />
                                     </group>
-                            </group>
-                        </t>
-                    </templates>
+                    </group>
                 </form>
             </field>
         </record>
+        
+        <record id="instance_status_search" model="ir.ui.view">
+            <field name="name">instance.status.search</field>
+            <field name="model">myodoo.instance</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="status"/>
+                </search>
+            </field>
+        </record>
+
+
     </data>
 </odoo>

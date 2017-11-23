@@ -23,6 +23,11 @@ class Instance(models.Model):
     ssh_password = fields.Char('SSH password');
     color = fields.Integer(calculate='_check_color')
 
+    partner_name = fields.Char(related='client_id.name')
+    partner_function = fields.Char(related='client_id.function')
+    partner_email = fields.Char(related='client_id.email')
+    partner_image = fields.Binary(related='client_id.image_small')
+
     @api.multi
     def button_on(self):
         self.ensure_one()
@@ -33,11 +38,9 @@ class Instance(models.Model):
         self.ensure_one()
         self.status = "down"
 
-    @api.multi
-    @api.depends('status')
-    def _check_color(self):
-        for record in self:
-            color = 0
-            if record.status == 'up':
-                color = 4
-            record.color = color
+    @api.onchange('status')
+    def _onchange_status(self):
+        if self.status == 'up':
+            self.color = 4
+        else:
+            self.color=2
