@@ -35,17 +35,17 @@ msgstr "8.0"
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_backend_login
 msgid "Backend login"
-msgstr "Backend login"
+msgstr "Usuario Backend"
 
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_backend_password
 msgid "Backend password"
-msgstr "Backend password"
+msgstr "Password Backend"
 
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_client_id
 msgid "Client"
-msgstr "Client"
+msgstr "Cliente"
 
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_color
@@ -55,7 +55,7 @@ msgstr "Color"
 #. module: myodoo_instance
 #: model:ir.actions.act_window,help:myodoo_instance.instance_list_action
 msgid "Create the first instance"
-msgstr "Create the first instance"
+msgstr "Crear la primera instancia"
 
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_create_uid
@@ -153,22 +153,22 @@ msgstr "On"
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_postgres_login
 msgid "Postgres login"
-msgstr "Postgres login"
+msgstr "Usuario Postgres"
 
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_postgres_password
 msgid "Postgres password"
-msgstr "Postgres password"
+msgstr "Password Postgres"
 
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_ssh_login
 msgid "SSH login"
-msgstr "SSH login"
+msgstr "Usuario SSH"
 
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_ssh_password
 msgid "SSH password"
-msgstr "SSH password"
+msgstr "Password SSH"
 
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_partner_image
@@ -198,7 +198,7 @@ msgstr "Encendida"
 #. module: myodoo_instance
 #: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_version
 msgid "Version"
-msgstr "Version"
+msgstr "Versión"
 
 #. module: myodoo_instance
 #: model:ir.model,name:myodoo_instance.model_myodoo_instance
