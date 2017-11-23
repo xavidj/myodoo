@@ -68,19 +68,20 @@
                         <group>
                                     <field name="name"/>
                                     <field name="description"/>
-                            <group>
-                                    <field name="client_id"/>
-                                    <field name="partner_name"/>
-                                    <field name="partner_function"/>
-                                    <field name="partner_email"/>
-                                    <field name="partner_image" widget="image" class="oe_avatar" />
-
-                            </group>
-                                    <field name="ip"/>
+                                   <field name="ip"/>
                                     <field name="version"/>
                                     <field name="status" />
                         </group>
+                         <group>
+                                    <field name="client_id"/>
+                                    <field name="partner_name" readonly="1"/>
+                                    <field name="partner_function" readonly="1"/>
+                                    <field name="partner_email" readonly="1"/>
+                                    <field name="partner_image" widget="image" class="oe_avatar"  readonly="1"/>
 
+                            </group>
+
+                        <group>
                                     <group>
                                         <field name="backend_login"/>
                                         <field name="backend_password" password="True" />
@@ -93,6 +94,7 @@
                                         <field name="ssh_login"/>
                                         <field name="ssh_password" password="True" />
                                     </group>
+                        </group>
                     </group>
                 </form>
             </field>
