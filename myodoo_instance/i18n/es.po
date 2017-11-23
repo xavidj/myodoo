@@ -1,0 +1,206 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* myodoo_instance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-23 12:28+0000\n"
+"PO-Revision-Date: 2017-11-23 13:33+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: myodoo_instance
+#: selection:myodoo.instance,version:0
+msgid "10.0"
+msgstr "10.0"
+
+#. module: myodoo_instance
+#: selection:myodoo.instance,version:0
+msgid "11.0"
+msgstr "11.0"
+
+#. module: myodoo_instance
+#: selection:myodoo.instance,version:0
+msgid "8.0"
+msgstr "8.0"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_backend_login
+msgid "Backend login"
+msgstr "Backend login"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_backend_password
+msgid "Backend password"
+msgstr "Backend password"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_client_id
+msgid "Client"
+msgstr "Client"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_color
+msgid "Color"
+msgstr "Color"
+
+#. module: myodoo_instance
+#: model:ir.actions.act_window,help:myodoo_instance.instance_list_action
+msgid "Create the first instance"
+msgstr "Create the first instance"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: myodoo_instance
+#: selection:myodoo.instance,status:0
+msgid "Down"
+msgstr "Apagada"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_partner_email
+msgid "Email"
+msgstr "Correo electrónico"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_id
+msgid "ID"
+msgstr "ID"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_ip
+msgid "IP"
+msgstr "IP"
+
+#. module: myodoo_instance
+#: model:ir.ui.menu,name:myodoo_instance.instance_menu
+msgid "Instance"
+msgstr "Instancia"
+
+#. module: myodoo_instance
+#: model:ir.ui.view,arch_db:myodoo_instance.instance_tree_view
+msgid "Instance Tree"
+msgstr "Arbol de instancias"
+
+#. module: myodoo_instance
+#: model:ir.actions.act_window,name:myodoo_instance.instance_list_action
+#: model:ir.ui.menu,name:myodoo_instance.instancesmenu
+#: model:ir.ui.menu,name:myodoo_instance.main_instances_menu
+msgid "Instances"
+msgstr "Instancias"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_partner_function
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_name
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_partner_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: myodoo_instance
+#: model:ir.ui.view,arch_db:myodoo_instance.instance_form_view
+msgid "Off"
+msgstr "Off"
+
+#. module: myodoo_instance
+#: model:ir.ui.view,arch_db:myodoo_instance.instance_form_view
+msgid "On"
+msgstr "On"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_postgres_login
+msgid "Postgres login"
+msgstr "Postgres login"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_postgres_password
+msgid "Postgres password"
+msgstr "Postgres password"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_ssh_login
+msgid "SSH login"
+msgstr "SSH login"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_ssh_password
+msgid "SSH password"
+msgstr "SSH password"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_partner_image
+msgid "Small-sized image"
+msgstr "Imagen de tamaño pequeño"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,help:myodoo_instance.field_myodoo_instance_partner_image
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Imagen de tamaño pequeño de este contacto. Se redimensiona automáticamente a 64x64 px, con el ratio de aspecto preservado. Use este campo donde se requiera una imagen pequeña."
+
+#. module: myodoo_instance
+#: selection:myodoo.instance,status:0
+msgid "Starting"
+msgstr "Arrancando"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_status
+msgid "Status"
+msgstr "Estado"
+
+#. module: myodoo_instance
+#: selection:myodoo.instance,status:0
+msgid "Up"
+msgstr "Encendida"
+
+#. module: myodoo_instance
+#: model:ir.model.fields,field_description:myodoo_instance.field_myodoo_instance_version
+msgid "Version"
+msgstr "Version"
+
+#. module: myodoo_instance
+#: model:ir.model,name:myodoo_instance.model_myodoo_instance
+msgid "myodoo.instance"
+msgstr "myodoo.instance"
