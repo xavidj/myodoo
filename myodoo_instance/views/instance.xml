@@ -97,7 +97,7 @@
                 </form>
             </field>
         </record>
-        
+
         <record id="instance_status_search" model="ir.ui.view">
             <field name="name">instance.status.search</field>
             <field name="model">myodoo.instance</field>

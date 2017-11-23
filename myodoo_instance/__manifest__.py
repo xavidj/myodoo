@@ -13,6 +13,7 @@
     ],
     "data": [
         'views/instance.xml',
+        'security/ir.model.access.csv',
     ],
     'installable': True,
 }
