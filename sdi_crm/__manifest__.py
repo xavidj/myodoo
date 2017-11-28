@@ -10,9 +10,11 @@
     "category": "CRM",
     "license": "AGPL-3",
     "depends": [
+        'crm',
     ],
     "data": [
-
+        'views/crm_lead_view.xml',
+        'security/ir.model.access.csv',
     ],
     'installable': True,
 }

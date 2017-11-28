@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sdi_crm_users,sdi_crm.sdi_project_type.users,model_sdi_crm_sdi_project_type,base.group_user,1,1,1,1
