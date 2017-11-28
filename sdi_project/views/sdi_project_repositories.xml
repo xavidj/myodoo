@@ -1,7 +1,57 @@
 <?xml version="1.0"?>
 <odoo>
 
+<record model="ir.actions.act_window" id="repository_list_action">
+            <field name="name">Repositories</field>
+            <field name="res_model">sdi_project.sdi_project_repositories</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first repository
+                </p>
+            </field>
+        </record>
 
+        <!-- A first level in the left side menu is needed
+             before using action= attribute -->
+        <menuitem id="repositoriesmenu" name="Repositories"
+                  parent="project.menu_project_management"/>
+        <!-- the following menuitem should appear *after*
+             its parent openacademy_menu and *after* its
+             action course_list_action -->
+        <menuitem id="repositorie_menu" name="Repositories" parent="repositoriesmenu"
+                  action="repository_list_action"/>
+        <!-- Full id location:
+             action="openacademy.course_list_action"
+             It is not required when it is the same module -->
+        <record model="ir.ui.view" id="repository_tree_view">
+            <field name="name">repositorie.tree</field>
+            <field name="model">sdi_project.sdi_project_repositories</field>
+            <field name="arch" type="xml">
+                <tree string="Repositorie Tree" >
+                    <field name="name"/>
+                    <field name="url"/>
+                    <field name="branch_id"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="repository_form_view">
+            <field name="name">repositorie.form</field>
+            <field name="model">sdi_project.sdi_project_repositories</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                    <field name="name"/>
+                    <field name="url"/>
+                    <field name="branch_id"/>
+                    <button type="object" name="get_models" string="Get Models"/>
+
+                    </group>
+                </form>
+            </field>
+        </record>
 
 
 </odoo>

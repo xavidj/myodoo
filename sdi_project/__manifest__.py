@@ -10,10 +10,12 @@
     "category": "PROJECT",
     "license": "AGPL-3",
     "depends": [
-        'crm',
+        'project',
     ],
     "data": [
         'views/sdi_project_repositories.xml',
+        'views/sdi_project_models.xml',
+        'views/sdi_project_settings.xml',
     ],
     'installable': True,
 }

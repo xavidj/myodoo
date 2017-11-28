@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<odoo>
+
+<record model="ir.actions.act_window" id="model_list_action">
+            <field name="name">Models</field>
+            <field name="res_model">sdi_project.sdi_project_models</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first model
+                </p>
+            </field>
+        </record>
+
+
+        <!-- the following menuitem should appear *after*
+             its parent openacademy_menu and *after* its
+             action course_list_action -->
+        <menuitem id="models_menu" name="Model" parent="repositoriesmenu"
+                  action="model_list_action"/>
+        <!-- Full id location:
+             action="openacademy.course_list_action"
+             It is not required when it is the same module -->
+        <record model="ir.ui.view" id="model_tree_view">
+            <field name="name">model.tree</field>
+            <field name="model">sdi_project.sdi_project_models</field>
+            <field name="arch" type="xml">
+                <tree string="Models Tree" >
+                    <field name="name"/>
+                    <field name="repositorie_id"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="model_form_view">
+            <field name="name">model.form</field>
+            <field name="model">sdi_project.sdi_project_models</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                    <field name="name"/>
+                    <field name="repositorie_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+</odoo>
