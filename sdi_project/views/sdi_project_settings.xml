@@ -39,7 +39,7 @@
                 <form>
                     <group>
                     <field name="name"/>
-                    <field name="passw"/>
+                    <field name="passw"  password="True" />
                     </group>
                 </form>
             </field>
