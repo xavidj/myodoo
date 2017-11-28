@@ -14,6 +14,7 @@
     ],
     "data": [
         'views/crm_lead_view.xml',
+        'views/project_project_view.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,
