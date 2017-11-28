@@ -2,7 +2,7 @@
 <odoo>
 
 
-        <record model="ir.ui.view" id="crm_lead_type_form_view">
+        <record model="ir.ui.view" id="crm_case_form_view_leads">
             <field name="name">crm.lead.type.form</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
@@ -13,7 +13,7 @@
             </field>
         </record>
 
-      <record model="ir.ui.view" id="crm_lead_type_tree_view">
+      <record model="ir.ui.view" id="crm_case_tree_view_leads">
             <field name="name">crm.lead.type.tree</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_tree_view_leads" />
@@ -24,7 +24,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="crm_lead_oppor_type_form_view">
+        <record model="ir.ui.view" id="crm_case_form_view_oppor">
             <field name="name">crm.lead.oppor.type.form</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
@@ -35,7 +35,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="crm_lead_oppor_type_tree_view">
+        <record model="ir.ui.view" id="crm_case_tree_view_oppor">
             <field name="name">crm.lead.oppor.type.tree</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
